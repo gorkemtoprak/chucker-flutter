@@ -44,9 +44,9 @@ class _SettingsPageState extends State<SettingsPage> {
                 description: Localization.strings['notificationSettingDesc']!,
                 child: Switch.adaptive(
                   activeColor: primaryColor,
-                  value: _settings.showNotification,
+                  value: false,
                   onChanged: (value) {
-                    _saveSettings(showNotification: value);
+                    _saveSettings(showNotification: false);
                   },
                 ),
               ),
