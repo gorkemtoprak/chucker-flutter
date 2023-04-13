@@ -49,7 +49,7 @@ class Settings {
         notificationAlignment: Alignment.bottomCenter,
         apiThresholds: 100,
         httpMethod: HttpMethod.none,
-        showNotification: true,
+        showNotification: false,
         showDeleteConfirmDialog: true,
         showRequestsStats: true,
         positionBottom: 0,
