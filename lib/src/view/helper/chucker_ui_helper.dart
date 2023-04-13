@@ -39,7 +39,7 @@ class ChuckerUiHelper {
       final entry = _createOverlayEntry(method, statusCode, path, requestTime);
       _overlayEntries.add(entry);
       overlay?.insert(entry);
-      notificationShown = true;
+      notificationShown = false;
       return true;
     }
     notificationShown = false;
