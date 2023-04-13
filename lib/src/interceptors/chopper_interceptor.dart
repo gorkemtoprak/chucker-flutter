@@ -15,7 +15,9 @@ class ChuckerChopperInterceptor extends ResponseInterceptor {
     final time = DateTime.now();
     await SharedPreferencesManager.getInstance().getSettings();
 
-    if (ChuckerFlutter.isDebugMode || ChuckerFlutter.showOnRelease) {
+    if (ChuckerFlutter.isDebugMode ||
+        ChuckerFlutter.showOnRelease ||
+        ChuckerFlutter.showNotification) {
       ChuckerUiHelper.showNotification(
         method: response.base.request?.method ?? '',
         statusCode: response.statusCode,
@@ -94,7 +96,7 @@ class ChuckerChopperInterceptor extends ResponseInterceptor {
   }
 
   dynamic _separateFileObjects(http.MultipartRequest? request) {
-    if(request == null) return emptyString;
+    if (request == null) return emptyString;
     final formFields =
         request.fields.entries.map((e) => {e.key: e.value}).toList()
           ..addAll(

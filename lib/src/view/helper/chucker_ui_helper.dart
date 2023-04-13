@@ -116,6 +116,10 @@ class ChuckerFlutter {
   ///By default its value is `false`
   static bool showOnRelease = false;
 
+  ///[showNotification] decides whether to allow notifications of Chucker Flutter
+  ///By default its value is `false`
+  static bool showNotification = false;
+
   ///[isDebugMode] A wrapper of Flutter's `kDebugMode` constant
   static bool isDebugMode = kDebugMode;
 
